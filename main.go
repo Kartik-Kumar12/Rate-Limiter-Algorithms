@@ -10,7 +10,7 @@ import (
 
 func main() {
 
-	ratelimiter, err := ratelimiterFactory.GetRateLimiter("sliding_window_counter")
+	ratelimiter, err := ratelimiterFactory.GetRateLimiter("token")
 	if err != nil {
 		log.Error().Msgf("Error creating ratelimiter instance %v", err)
 		return
