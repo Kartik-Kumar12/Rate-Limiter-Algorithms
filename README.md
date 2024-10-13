@@ -18,6 +18,8 @@ This project provides implementations of various rate-limiting algorithms in Go.
   - [Fixed Window](#fixed-window)
   - [Sliding Window Log](#sliding-window-log)
   - [Sliding Window Counter](#sliding-window-counter)
+- [Design Patterns](#design-patterns)
+  - [Factory Pattern](#factory-pattern)
 - [Contributing](#contributing)
 
 ## Overview
