@@ -186,6 +186,30 @@ The Sliding Window Counter algorithm divides time into smaller intervals and kee
 
 - **Use-case:** Balances accuracy and performance, reducing the memory footprint compared to Sliding Window Log.
 
+## Design Patterns
+
+### Factory Pattern
+
+The **Factory Pattern** is used in this project to create instances of the different rate-limiting algorithms. The `GetRateLimiter` function acts as a factory, which takes the name of the algorithm as an input and returns an instance of the appropriate rate limiter.
+
+- **Use-case**: This pattern simplifies the process of selecting the desired rate-limiting algorithm. The caller doesn't need to instantiate the algorithm directly, but can simply provide a string name, and the factory method will handle the object creation.
+
+**Code Example**:
+```go
+func GetRateLimiter(algo string) (Ratelimiter, error) {
+    switch algo {
+    case "token":
+        return algorithms.NewTokenBucket(5, 1), nil
+    case "leaky":
+        return algorithms.NewLeakyBucket(5, 1), nil
+    // other algorithms...
+    default:
+        return nil, fmt.Errorf("unsupported algorithm %v", algo)
+    }
+}
+```
+
+
 ## Contributing
 
 Contributions are welcome! If you'd like to enhance the project or fix issues, please follow these steps:
