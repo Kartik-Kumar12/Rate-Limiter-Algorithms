@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/Kartik-Kumar12/Rate-Limiter-Algorithms/algorithms"
+	"github.com/Kartik-Kumar12/Rate-Limiter-Algorithms/rate_limiter/algorithms"
 )
 
 func GetRateLimiter(algo string) (Ratelimiter, error) {

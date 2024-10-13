@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	ratelimiterFactory "github.com/Kartik-Kumar12/Rate-Limiter-Algorithms"
+	ratelimiterFactory "github.com/Kartik-Kumar12/Rate-Limiter-Algorithms/rate_limiter"
 	"github.com/rs/zerolog/log"
 )
 
